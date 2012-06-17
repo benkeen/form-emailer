@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+<title>Example Form</title>
+
+<style type='text/css'>
+p, table, td, input, select
+{
+  font-family: arial;
+  font-size: 8pt;
+}
+.html
+{
+  margin: 15px;
+  font-family: courier;
+}
+</style>
+
+</head>
+<body>
+<table width='600' align='center'>
+  <tr>
+    <td>
+      <br />
+      <p><b><u>Example Form 2</u></b></p>
+
+      <p>
+        This second example form illustrates how to use the <b>email.php</b> script with
+        custom templates. As before, to get it running, upload this, the email.php script 
+        and the email_template.txt file to the same folder on your server. Next, edit this page 
+        and update the values for the hidden fields (recipient & redirect_page), then check the 
+        <b>readme.txt</b> file for instructions on how to configure the email.php script to be 
+        allowed to send emails from this URL.
+      </p>
+
+      <form action="email.php" method="post">
+        <!-- email settings -->
+        <input type='hidden' name='recipient' value='youremail@yoursite.com' />
+        <input type='hidden' name='email_from' value='from@yoursite.com' />
+        <input type='hidden' name='reply_to' value='reply_to@server.com' />
+        <input type='hidden' name='email_subject' value='This is from %Name%' />
+        <input type='hidden' name='email_template' value='email_template.txt' />
+        <input type='hidden' name='redirect_page' value='http://www.google.com' />
+
+        <!-- receipt email -->
+        <input type='hidden' name='receipt_email_field' value='email' />
+        <input type='hidden' name='receipt_email_subject' value='Thanks!' />
+        <input type='hidden' name='receipt_template' value='receipt_template.txt' />
+        
+        <table width='100%' style='border: 1px solid black; background-color: #efefef'>
+          <tr>
+            <td>Name:</td>
+            <td><input type='textbox' name='Name' value='' /></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type='textbox' name='email' value='' /></td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>
+              <input type='radio' name='Gender' value='Female' checked />Female 
+              <input type='radio' name='Gender' value='Male' />Male
+              <input type='radio' name='Gender' value='Both' />Both 
+              <input type='radio' name='Gender' value='Other' />Other
+            </td>
+          </tr>
+          <tr>
+            <td>Marital Status:</td>
+            <td><select name="Marital Status">
+                <option value="Married">Married</option>
+                <option value="Single">Single</option>
+                <option value="Divorced">Divorced</option>
+                <option value="None of your Business">None of your Business</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Comments:</td>
+            <td><textarea style='width: 100%; height: 80px;' name='Comments' /></textarea></td>
+          </tr>
+        </table>
+        
+        <p><input type='submit' value='SEND EMAIL' /></p>
+
+      </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

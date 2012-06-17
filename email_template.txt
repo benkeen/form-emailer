@@ -1,0 +1,9 @@
+Thanks for submitting the form!
+
+Your Name: %Name%
+Your Email: %email%
+Gender: %Gender%
+Marital Status: %Marital_Status%
+Comments: %Comments%
+
+And that's all, folks!
