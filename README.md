@@ -5,7 +5,7 @@ This is one of my oldest scripts, but is still extremely practical & may be of u
 
 ## Demo
 Check out my site for documentation:
-http://www.benjaminkeen.com/software/form_emailer/
+http://www.benjaminkeen.com/open-source-projects/smaller-projects/old-stuff/form-emailer/
 
 ## Changelog
 
